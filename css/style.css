@@ -1,0 +1,130 @@
+*{
+	line-height: 18px;font-family: tahoma , verdana , sans-serif;
+	font-size: 12px;
+
+	margin: 0;padding: 0;
+}
+.warpe{
+	background-color: #fbfbfb;
+	width: 76%;margin: 0 auto;
+}
+
+nav{ /*must be in the blgin*/
+	float: left;
+	width: 100%;
+	background-color: #2d2d2d;
+	height: 40px;line-height: 40px;
+}
+nav ul {
+	position: relative;
+}
+nav li{
+	float: left;
+	margin-left: 30px;
+}
+nav li:first-child{
+	margin-left: 25px;
+}
+nav li a{
+	text-decoration: none;
+	color: #fbfbfb;line-height: 40px;
+}
+article{
+	float: left;
+	width: 100%;
+	margin: 30px 0;
+}
+article h4{
+	font-family: verdana;
+	font-size: 20px;
+	margin: 20px 0 10px 0;
+}
+img{
+	width: 100%;
+}
+.fixedTop{ /*must be in the blgin*/
+	top: 0;position: fixed;
+	width: 76%;
+}
+nav ul li ul{
+	position: absolute; 
+	width: 200px;float: left;
+	background-color: red;
+	z-index: 2;display: none;
+	
+}
+nav ul li ul li{
+	float: left;
+	width: 100%;
+	margin:0 0 0 20px ;
+}
+nav ul li ul li:first-child{
+	margin:0 0 0 20px ;
+}
+
+@media screen and (max-width: 740px) { 
+	nav{ /*must be in the blgin*/
+		height: auto;
+	}
+ 	nav ul li{
+		width: 100%; /*must be in the blgin*/
+		border-top: 1px solid #202122;
+		border-bottom: 1px solid #33;
+		margin: 0;position: relative;
+		
+	}
+	.select{
+		background-color: black;
+	}
+	.select::before { 
+	  content: "«";
+	  color: blue;
+	}	
+	nav li:first-child{
+		margin:0
+	}
+	nav li a{
+		margin-left: 20px;
+		width: 100%;
+		float: left;
+		display: block; /*must be in the blgin*/
+	}
+	nav ul li ul{
+		position: static;
+		width: 100%;
+		display: none;
+	}
+	nav ul li ul li,nav ul li ul li:first-child{
+		margin: 0!important;
+	}
+
+	/*menu*/
+	.plus:after {
+    	content:" +";
+    	color: #2d2d2d;font-size: 20px;
+		font-family: tahoma , verdana , sans-serif;
+		font-weight: bold;position: absolute;
+		right: 10px;top: 10px;
+		
+
+		background-color: #131313;
+		width: 20px;height: 20px;
+		text-align: center;
+		line-height: 20px;
+		border-radius: 20px;
+	}
+	.minus:after {
+	    content:" -";
+	    color: #2d2d2d;font-size: 20px;
+		font-family: tahoma , verdana , sans-serif;
+		font-weight: bold;position: absolute;
+		right: 10px;top: 10px;
+		
+
+		background-color: #131313;
+		width: 20px;height: 20px;
+		text-align: center;
+		line-height: 20px;
+		border-radius: 20px;
+	}
+}
